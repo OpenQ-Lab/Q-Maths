@@ -1,7 +1,12 @@
 add_library(Q-Maths)
 
-# sub section (cmake)
-add_subdirectory(complex)
+target_sources(Q-Maths
+        PUBLIC
+        FILE_SET HEADERS
+        BASE_DIRS ${CMAKE_SOURCE_DIR}/include
+        FILES
+        ${CMAKE_SOURCE_DIR}/include/complex/complexNb.hpp
+)
 
 target_include_directories(Q-Maths PUBLIC
         $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
@@ -13,3 +18,5 @@ if(MSVC)
 else()
     target_compile_options(Q-Maths PRIVATE -Wall -Wextra -Wpedantic)
 endif()
+
+add_subdirectory(complex)
