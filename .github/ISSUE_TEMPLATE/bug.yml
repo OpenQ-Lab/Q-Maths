@@ -19,10 +19,11 @@ body:
     attributes:
       label: Affected Component
       options:
-        - Server
-        - AI / Client
-        - GUI
-        - Network Protocol
+        - Maths
+        - Simulator
+        - Tests
+        - Build system
+        - Other
     validations:
       required: true
   - type: textarea
