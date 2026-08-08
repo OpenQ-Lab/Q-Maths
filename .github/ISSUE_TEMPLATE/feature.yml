@@ -21,11 +21,11 @@ body:
     attributes:
       label: Target Component
       options:
-        - Server
-        - AI / Client
-        - GUI
-        - Core / Shared
-        - Build System
+        - Maths
+        - Simulator
+        - Tests
+        - Build system
+        - Other
     validations:
       required: true
   - type: textarea
